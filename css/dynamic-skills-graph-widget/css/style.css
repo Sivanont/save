@@ -1,0 +1,221 @@
+body {
+  font: 300 14px/16px 'Lato', Arial, Helvetica, sans-serif;
+}
+
+.section,
+section {
+  clear: both;
+  padding: 0;
+  margin: 0;
+}
+/*
+A group (usually used in conjunction with a section) is used to contain floating
+elements, so that the design will contain and break after all the floating
+elements in the group.
+*/
+.group {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+}
+.group:after,
+.group:before {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+/*
+Floating sections used to breakup the page. Usually contained inside of a
+`group` and `section`, please include the class `col` and `cols-n` on your
+column element.
+*/
+.col-1 {
+  width: 980px;
+}
+.col-2 {
+  width: 478px;
+}
+.col-3 {
+  width: 310.67px;
+}
+.col-4 {
+  width: 227px;
+}
+.col-5 {
+  width: 176.8px;
+}
+.col-6 {
+  width: 143.34px;
+}
+.col-7 {
+  width: 119.43px;
+}
+.col-8 {
+  width: 101.5px;
+}
+.col-9 {
+  width: 87.56px;
+}
+.col-10 {
+  width: 76.4px;
+}
+.col-11 {
+  width: 67.27px;
+}
+.col-12 {
+  width: 59.67px;
+}
+.col {
+  display: block;
+  float: left;
+  margin-right: 24px;
+}
+.col:last-child {
+  margin-right: 0;
+}
+
+.tbg-1 {
+  background-color: red;
+}
+.tbg-2 {
+  background-color: blue;
+}
+.tbg-3 {
+  background-color: green;
+}
+.tbg-4 {
+  background-color: yellow;
+}
+
+/* Skills Table */
+
+.w-skills .col {
+  margin-right: 0;
+}
+
+.w-skills-add {
+  padding: 0.5em;
+}
+.w-skills-add a {
+  color: #b2b2b2;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+.w-skills-bar {
+  background-color: #e1e1e1;
+  height: .75em;
+  margin-top: 0.5em;
+}
+.is-active .w-skills-bar {
+  background-color: #2CA4EC;
+}
+
+.w-skills-bubble {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QwGABUrGeYI2AAAACZpVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVAgb24gYSBNYWOV5F9bAAABoElEQVQ4y4WTS6+iQBCFv+aRCw0xYCAk6sr//5NcuNGIUQMG5Nn0XRgYZJzM2RSdrjpdp6gjtNYAaK0RQlCWpc7znLIseb1eKKXwfR/f9wmCANd1hRCCEWIkALher/p+vxOGIVJKpJQjKWVZkmUZURQRx7H4INBacz6ftVKKJEmwbRvDMFiirmvSNMWyLLbbrQAwtNbcbjetlGKz2fDz8/NRPJfoOA673Q6lFGmaagBxOBx00zTs93scx5lmMSeYnwGqquJ4PL4fa9uW9XqN4zhvTf8pBnBdlzAMaZoGo+s6pJR8w7fiEZ7n0fc9Rt/3eJ73NWkc8DdIKem6DgNgGIaPxLFwKWceh2EAwLAsi7quP5KFENP5X7FpGkzTxLBtm6Io/upgHpffAM/n8/0XHMchyzLatp2Slq+Ncsb7uq7J8/y9cKZpIoQgTdNJ13KQc0KlFNfrFcMwsG37jxdOp5Pu+54kSaadWLbfti2Xy+Vjlb+aKQgCfN/Hdd2p5aIoeDwexHFMFEWTI8VyOKOdi6KgqiqUUniex2q1muw8z/8F6+4Ke3/paJkAAAAASUVORK5CYII=);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 16px;
+  position: absolute;
+  right: -0.5em;
+  top: 0.4em;
+  width: 16px;
+  z-index: 1;
+}
+.is-active .w-skills-bubble {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QwGABchywWDRAAAACZpVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVAgb24gYSBNYWOV5F9bAAACr0lEQVQ4yz2Tz2/UZRCHn5n33d2iUFugbUirtCkpmJSqjcQeiBZvJipXDfHsj5gYufgnePNiD3pVgx5NTLiYEGtCUBIrJrVQpbYmVGhTSkuJdne/73w8LOUyx5nn88k8FkXgAIEwfr8r/fhPxdV1+GPjPwwY623wwoA4PbiPk4cxQWcAJglUkCW+WWzp25Vg+ohzasAY68nIgz+34Oc7hdnVNmeHnXPH9xkGUsEUQhbMzLW0WRXeOtHFSLdhOCIwOViHcGkHLlxv8ViG85NdZkSH4MLirm5uO+cna+zPxsWlFt/frvhlvUVSjef7Ei8+mXl1OPOgCj6Za3Os1+LcWD3Z019td48fqm1/PNXFaI8x81vh8/l/UYBS57iFIRfvjzd4e6LO8v22PrrcLNfv6Ql39wfTQ5nRHuO7lcJn89sIwxxMhlQAUMCn800u/tVi5ECN6acaJctaLilN9SUguPR3E7MGKAgDSbgycuGdIvjhVoUZmupTaZvXXBKjBwU41+62kQxkHXQPZA7qRCDg6kYHZ7THQS3czSikR41XViCBMBSOVJB3YgBkKsKEkcEyLonlzQDg2f4aCUgBUuDWWerhUMAxJvrrGMmWtnCXuh1o/7RegYwzQ5msikiGyQirQQosRLiQxMuDgMSVtcpd4GZidrWwsmO8MmK8c/IAhLC99w6IZCTEexN1Xhups3Ifm11tpjDWMsDCRpMvbsCHk3XencgM7q8ze8u4ttEi5Dx3OPPS0cTZ4cxOEV/e2GVhM1x66EIBZn7d1VYFbx7PjHVnJGF7xgDCWd6q+HoxeLzhfPCMmZEwlQAzZDyS6cwR59RA5livA+LmVuHKnTaXb4vXjybeOJEMMqg8tBHYU3Rhs+jSasXcWrB4r01IjB2qM9WfOD1UY/ygzIAKJwP/A2WQZQN0zYcmAAAAAElFTkSuQmCC);
+}
+
+
+.w-skills-col-lbl {
+  border-bottom: 1px solid #d7d7d7;
+}
+.w-skills-col-prof {
+  border-bottom: 1px solid #d7d7d7;
+  text-align: center;
+}
+.w-skills-col-spacer {
+  width: 42px;
+}
+.w-skills-col-switch {
+  text-align: center;
+}
+
+.w-skills-hd {
+  color: #b2b2b2;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+.w-skills-hd-prof-end {
+  float: right;
+  text-align: right;
+}
+.w-skills-hd-prof-start {
+  float: left;
+  text-align: left;
+}
+
+.w-skills-info {
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QwGABAfRSUIKAAAACZpVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVAgb24gYSBNYWOV5F9bAAACaUlEQVQ4y61UXW6zMBCcJQ4YqLCVKFIv0Jfe/wY9QKXeoqkomIAd87ffQz4IIU2fui+2sHd2ZtYsMTP+OsSjA2stW2vhnIP3Hn3fQwiBKIoQxzHSNEUcx/RTLq2Ztm3LVVXBGAOlFOI4RhRF2Gw2NI4jT0WKooBSClprbLdbegjqnOOiKBCGIbTWEELMl5kZRNfcYRi4KAp477Hf7yGlpDvQruv4eDzi6ekJWZbREmANuAxjDNd1jcPhgDAMaRxHBFNSURSQUkIpRUSEpYL393d+e3vjPM95WQgAlFIkpYQxBgAQBMEF1HvPp9MJWmsw8w2z8/nMTdOAmXE8Hq++LZgrpVBVFay1PHe/rmtorREEwR1LKSW9vLxw27Y4HA538pkZm82Gsixj5xySJLmAOuew2+3m6tM6MX5+fv7R0KWiJEmQ5zl2u90F1HuPKIruGjLtPz4+2BiD19dX7Pd7Wp8zM6IoQtd1IKKLp/8f9ix9KZ+ZYYwBEaGu6x9fABFBCEFt24KZL6BCCPR9z9OFpa8Tm3Ecse78Mvq+ZyHElamUEt77X99lEAQ3hab9tHrvIaW8MpVSwjl3I2fNZllo2i/XqfMz0zRNUZblbMHy8iMPlzEMA5dlCSnlRRUAxHFMSimUZXmTtE7O8xyfn5+8tqGqKiilkKYpzaAAoLWG9x7GmDt6SikAQNM0aJrmRsXpdGJrLbTW91OKmdG2LX99fSFJEmRZBiEErf1bdtsYg/P5/HhKTcDDMPD39/csKUkShGGI7XZLXddx13Ww1qIsS2itoZT6fZ4uwznHTdP8zeT/7f9ef3s0Z/8B4/SvlBoBIhEAAAAASUVORK5CYII=);
+  float: right;
+  height: 21px;
+  margin-right: 0.5em;
+  margin-top: 0.25em;
+  width: 21px;
+}
+
+.w-skills-lbl {
+  float: left;
+  overflow: ellipsis;
+  padding-left: 1em;
+  width: 180px;
+}
+
+.w-skills-line {
+  color: #464646;
+  font-size: 16px;
+  line-height: 1.875em;
+}
+.w-skills-line .w-skills-col-prof {
+  border-left: 1px solid #d7d7d7;
+}
+
+.w-skills-line-odd .w-skills-col-lbl,
+.w-skills-line-odd .w-skills-col-prof {
+  background-color: #f9f9f9;
+}
+
+.w-skills-segment {
+  border-right: 1px solid #d7d7d7;
+  float: left;
+  height: 1.875em;
+  position: relative;
+  width: 94.5px;
+}
+
+.w-skills-switch {
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  width: 2.7em;
+}
+.w-skills-switch-a {
+  float: left;
+}
+.w-skills-switch-b {
+  float: right;
+}
+.w-skills-switch.is-active {
+  background-color: #2ca4ec;
+  color: #fff;
+}
+.w-skills-switch
+-wrap {
+  background-color: #f1f1f1;
+  border: 1px solid #d7d7d7;
+  height: 1.5em;
+  line-height: 1.5em;
+  margin: 0.125em 0;
+}
